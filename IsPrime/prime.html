@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Numbers</title>
+    <link rel="stylesheet" type="text/css" href="prime.css">
+</head>
+<body>
+
+    <div class="listContainer">
+        <label for="Start">Enter a number below </label>
+        <input type="number" id="number" placeholder="      Enter a number">
+        <button onclick="generateLists()">START</button>
+    </div>
+
+
+    <div class="listContainer">
+        <label for="primeList">Prime Number List</label>
+        <div id="primeList" class="list"></div>
+        <div id="primeSum"></div>
+        <button onclick="calculateSum('prime')">SUM</button>
+    
+    </div>
+
+    <div class="listContainer">
+        <label for="nonPrimeList">Non-Prime Number List</label>
+        <div id="nonPrimeList" class="list"></div>
+        <div id="nonPrimeSum"></div> 
+        <button onclick="calculateSum('nonPrime')">SUM</button>
+    </div>
+
+    <script src="prime.js"></script>
+</body>
+</html>
+
