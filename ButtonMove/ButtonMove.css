@@ -1,0 +1,15 @@
+#viewingArea {
+  background-color: black;
+  height: 75vh; /* vh units make sure the viewing area fills approximately 3/4 of the browser window */
+  position: relative; /* relative positioning allows absolute positioning of children */
+}
+
+button {
+  position: absolute; /* this lets us position buttons anywhere in the viewing area */
+}
+
+.controlButton {
+  margin-right: 10px;
+  padding-left: 3.5%;
+}
+
