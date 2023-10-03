@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Page 3</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="header">
+    <h1>File Sharing in the BitTorrent Protocol</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page2.html">Page 2</a></li>
+        <li><a href="#section1">File Sharing</a></li>
+        <li><a href="#section2">HTTP Differences</a></li>
+        <li><a href="#section3">BitTorrent Swarm</a></li>
+        <li><a href="#section4">BitTorrent VS DNS</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="content">
+    <div class="section" id="section1">
+      <h2>Process of File Sharing in BitTorrent</h2>
+      <h4>The BitTorrent protocol is a decentralized method of file sharing that uses peer-to-peer (P2P) networking structure. It involves the following steps:</h4>
+      <ol>
+        <li>The seeder creates a torrent file containing metadata about the shared file.</li>
+        <br>
+        <li>The torrent file is uploaded to a torrent index site.</li>
+        <br>
+        <li>Users download the torrent file and open it with a BitTorrent client.</li>
+        <br>
+        <li>The client connects to a tracker specified in the torrent file to get the IP addresses of other peers.</li>
+        <br>
+        <li>The client starts downloading chunks of the file from multiple sources simultaneously and uploads the parts it already received to other peers.</li>
+        <br>
+        <li>The downloading and uploading process continues until the complete file is downloaded, making the client a seeder.</li>
+      </ol>
+    </div>
+
+    <div class="section" id="section2">
+      <h2>Differences from Downloading via HTTP</h2>
+      <h4>Downloading files via the BitTorrent protocol differs from HTTP in the following ways:</h4>
+      <ul>
+        <li>BitTorrent uses a decentralized approach, while HTTP follows a centralized approach.</li>
+        <br>
+        <li>BitTorrent downloads and uploads chunks of the file from multiple peers, whereas HTTP downloads the entire file from a single server.</li>
+        <br>
+        <li>BitTorrent leverages the bandwidth of hosts sharing the file, reducing the load on individual servers and potentially accelerating download speeds.</li>
+        <br>
+        <li>The order of downloading files in BitTorrent can be random due to the distributed nature, while HTTP downloads files in a sequential manner.</li>
+     
+      </ul>
+    </div>
+<br>
+<div class="section" id="section3">
+  <h2>What is a BitTorrent 'swarm'? How does this concept contribute to BitTorrent's efficiency compared to traditional HTTP file transfers?</h2>
+  <ol>
+    <li>A swarm is a collective of peers and seeders who upload/download a file to and from each other.</li>
+    <br>
+    <li>All swarm members contribute to distributing the file, either uploading or downloading different pieces of the file.</li>
+    <br>
+    <li>The speed or efficiency of the download process will increase because more available sources for each file piece when the swarm grows.</li>
+    <br>
+    <li>HTTP file transfer - a file is downloaded entirely from a server which may cause a bottleneck in the server’s bandwidth.</li>
+    <br>
+    <li>BitTorrent, however, distributes the file load across the swarm which breaks the file into pieces.</li>
+    <br>
+    <li>BitTorrent’s swarm prevents server bottlenecks, enables quicker downloads, and is especially beneficial for distributing files that might otherwise overload a server.</li>
+  </ol>
+</div>
+<br>
+
+<div class="section" id="section4">
+  <h2>How does BitTorrent manage to reduce the load on the source server, and how does this compare
+    with HTTP?</h2>
+  <ol>
+    <li>BitTorrent distributes the load on the source server through its peer-to-peer (P2P) network structure.</li>
+    <br>
+    <li>A file shared through BitTorrent is broken into pieces which are distributed among the network's participants.</li>
+    <br>
+    <li>As peers download the pieces from the different seeders, they upload the pieces to others, spreading the load of the file distribution.</li>
+    <br>
+    <li>In contrast, the HTTP client-server model delivers the entire file from a single source server to the client, which can cause bottlenecks or crashes under high demand.</li>
+  </ol>
+</div>
+<br>
+
+<div class="section" id="section5">
+  <h2>Compare BitTorrent with the distributed nature of DNS. How are they similar? How are they different?</h2>
+  <ol>
+    <li>BitTorrent and DNS share similarities in their decentralized architecture, improving reliability and robustness.</li>
+    <br>
+    <li>Both systems distribute information across multiple nodes, reducing the chance of a single point of failure.</li>
+    <br>
+    <li>In BitTorrent, files are broken into pieces and shared among a network of peers, each contributing to the distribution process.</li>
+    <br>
+    <li>DNS information is spread across a hierarchy of servers worldwide, with each server storing a portion of the total DNS database.</li>
+    <br>
+    <li>They are different in terms of their functions and operational principles. BitTorrent is a peer-to-peer file-sharing protocol, while DNS is a system for translating domain names into IP addresses for network navigation.</li>
+  </ol>
+</div>
+
+<br>
+  <div id="footer">
+    <p>&copy; 2023 Joel Miller's Website. All rights reserved.</p>
+  </div>
+</body>
+</html>

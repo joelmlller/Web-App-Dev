@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Business Cards</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="cards.js" > </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">JavaScript Business Cards</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Page 2</a></li>
+          <li><a href="page3.html">Page 3</a></li>
+        
+          <li>
+            <a href="projects.html" class="desktop-link">Projects</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Projects</label>
+            <ul>
+              <li><a href="chapter04.html">Button Click</a></li>
+              <li><a href="sort.html">Javascript Sort</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+
+  <div id="about"> </div>
+ 
+    
+    <p>External script output coming up...</p>
+        
+    <form id="birthdayForm">
+        <label for="sueBday">Sue Suthers Birthday:</label>
+        <input type="date" id="sueBday" name="sueBday"><br>
+
+        <label for="fredBday">Fred Fanboys Birthday:</label>
+        <input type="date" id="fredBday" name="fredBday"><br>
+
+        <label for="jimboBday">Jimbo Jones Birthday:</label>
+        <input type="date" id="jimboBday" name="jimboBday"><br>
+
+        <input type="button" value="Submit" onclick="getBirthday()">
+    </form>
+ 
+    <p>External script output has ended.</p>
+   
+</body>
+ 
+  <div id="footer">
+    <p>&copy; 2023 Joel Miller's Website. All rights reserved.</p>
+  </div>
+</html>

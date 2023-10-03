@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Events</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">Javascript Events</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Page 2</a></li>
+          <li><a href="page3.html">Page 3</a></li>
+        
+          <li>
+            <a href="projects.html" class="desktop-link">Projects</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Projects</label>
+            <ul>
+                <li><a href="sort.html">Javascript Sort</a></li>
+              <li><a href="cards.html">Card Object</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+
+<br><br><br><br><br><br>
+
+  
+<div class="butt">
+<input type="button" class="button btn" value="RED" onmouseover="hoverButton(this, 'red')" onclick="changeBC('red')">
+<input type="button" class="button btn" value="GREEN" onmouseover="hoverButton(this, 'green')" onclick="changeBC('green')">
+<input type="button" class="button btn" value="BLUE" onmouseover="hoverButton(this, 'blue')" onclick="changeBC('blue')">
+
+  <br>
+  <br>
+</div>
+
+
+<div class="table1">
+  <table>
+   
+      <tr>
+       
+          <td>Red Click Count:</td>
+          <td><input type="text" id="redCount" value="0" disabled></td>
+
+       
+          <td>Red Hover Count:</td>
+          <td><input type="text" id="redCount2" value="0" disabled></td>
+      </tr>
+      <tr>
+          <td>Green Click Count:</td>
+          <td><input type="text" id="greenCount" value="0" disabled></td>
+
+          <td>Green Hover Count:</td>
+          <td><input type="text" id="greenCount2" value="0" disabled></td>
+      </tr>
+      <tr>
+          <td>Blue Click Count:</td>
+          <td><input type="text" id="blueCount" value="0" disabled></td>
+
+           <td>Blue Hover Count:</td>
+          <td><input type="text" id="blueCount2" value="0" disabled></td>
+      </tr>
+      <tr>
+          <td>Total Color Click Count:</td>
+          <td><input type="text" id="colorChangeCount" value="0" disabled></td>
+
+          <td>Total Button Hover Count:</td>
+          <td><input type="text" id="colorChangeCount2" value="0" disabled></td>
+      </tr>
+  </table>
+</div>
+
+
+
+
+<script>
+    var redCount = 0;
+    var greenCount = 0;
+    var blueCount = 0;
+    var colorChangeCount = 0;
+    var colorChangeCountElement = document.getElementById('colorChangeCount');
+var redCount2 = 0;
+    var greenCount2 = 0;
+    var blueCount2 = 0;
+    var colorChangeCount2 = 0;
+    var colorChangeCount2Element = document.getElementById('colorChangeCount2');
+   
+   
+    function changeBC(color){
+        document.body.style.background = color;
+        if(color=='red')
+        {
+            redCount++;
+            document.getElementById("redCount").value = redCount;
+            colorChangeCount++;
+            
+        colorChangeCountElement.value = colorChangeCount;
+        }
+        else if(color=='green')
+        {
+            greenCount++;
+            document.getElementById("greenCount").value = greenCount;
+            colorChangeCount++;
+           
+        colorChangeCountElement.value = colorChangeCount;
+        }
+        else
+        {
+            blueCount++;
+            document.getElementById("blueCount").value = blueCount;
+            colorChangeCount++;
+         
+        colorChangeCountElement.value = colorChangeCount;
+        }
+    }
+
+function hoverButton(button, color){
+        button.classList.toggle('button');
+        button.classList.toggle('btn');
+        button.classList.toggle('color-change');
+
+        colorChangeCount2++;
+
+        if(color=='red')
+        {
+            redCount2++;
+            document.getElementById("redCount2").value = redCount2;
+        }
+        else if(color=='green')
+        {
+            greenCount2++;
+            document.getElementById("greenCount2").value = greenCount2;
+        }
+        else
+        {
+            blueCount2++;
+            document.getElementById("blueCount2").value = blueCount2;
+        }
+        colorChangeCount2Element.value = colorChangeCount2;
+    }
+
+</script>
+  <div id="footer">
+    <p>&copy; 2023 Joel Miller's Website. All rights reserved.</p>
+  </div>
+</body>
+</html>
